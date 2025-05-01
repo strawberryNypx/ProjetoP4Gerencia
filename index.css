@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+    background-color: rgb(237, 246, 255);
+}
+nav{
+    background-color: rgb(0, 65, 139);
+    
+}
+.nav{
+    color: rgb(237, 246, 255);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'JetBrains Mono', monospace;
+}
+.home{
+    font-family: 'JetBrains Mono', monospace;
+}
+button{
+    background-color: rgb(0, 65, 139) ;
+    color: rgb(237, 246, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #4288f1;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width:600px){
+    nav{
+       padding-bottom: 5%;
+    }
+    .nav{
+        padding-top: 5%;
+        margin-left: 10%;
+    }
+    .home{
+        margin-top: 10%;
+    }
+    #resumo{
+        margin-left: 35%;
+        padding-bottom: 5%;
+    }
+    .button{
+        display: flex;
+        padding: 10%;
+        flex-direction: column;
+    }
+    button{
+        font-family: 'JetBrains Mono', monospace;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 25%;
+        width: 50%;
+        padding: 5%;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1900px) {
+    nav {
+        padding-bottom: 2%;
+    }
+    .nav {
+        padding-top: 2%;
+        margin-left: 35%;
+    }
+    .home {
+        margin-top: 5%;
+        background-color: rgb(230, 236, 250);
+        box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+        width: 50%;
+        height: 100%;
+        margin-left: 25%;
+    }
+    #resumo {
+        margin-left: 45%;
+        padding-bottom: 2%;
+       
+    }
+    .button {
+        display: flex;
+        padding: 3%;
+        flex-direction: column;
+        gap: 2%;
+        justify-content: center;
+    }
+    button {
+        font-family: 'JetBrains Mono', monospace;
+        margin: 0;
+        width: 30%;
+        padding: 2%;
+        font-size: 16px;
+        margin-bottom: 5%;
+        margin-left: 36%;
+        
+    }
+    #resuminho{
+        padding-left: 2%;
+    }
+}
+
