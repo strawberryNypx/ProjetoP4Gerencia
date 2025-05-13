@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <header>
+        <h1 class="h1">Engenharia De Software</h1>
+    </header>
+    <div class="conteiner">
+        <div class="drop-down">
+            <div class="square">
+                <div class="topico">Reservar Quarto</div>
+                <div class="descricao">Funcionário registra reserva para cliente</div>
+            </div>
+            <div class="square">
+                <div class="topico">Check-in</div>
+                <div class="descricao">O cliente ocupa o quarto reservado</div>
+            </div>
+            <div class="square">
+                <div class="topico">Check-out</div>
+                <div class="descricao">Processo de saída do cliente e cálculo de pagamento</div>
+            </div>
+            <div class="square">
+                <div class="topico">Registrar Consumo</div>
+                <div class="descricao">Adição de consumos (bebidas, refeições etc.)</div>
+            </div>
+            <div class="square">
+                <div class="topico">Gerar Relatórios</div>
+                <div class="descricao">Visualização de relatórios por período, ocupação e receita</div>
+            </div>
+            <div class="square">
+                <div class="topico">Cadastrar Funcionário</div>
+                <div class="descricao">Administrador registra dados dos funcionários</div>
+            </div>
+            <div class="square">
+                <div class="topico">Gerenciar Quartos</div>
+                <div class="descricao">Atualização de informações dos quartos (preço, tipo, status)</div>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    const topicos = document.querySelectorAll('.topico');
+    topicos.forEach(topico => {
+    topico.addEventListener('click', () => {
+        topico.classList.toggle('ativo');
+    });
+    });
+</script>
 </html>
