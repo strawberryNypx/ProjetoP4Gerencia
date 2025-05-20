@@ -17,28 +17,164 @@
               A partir da análise do projeto pode-se ver como o sistema deve funcionar, o detalhamento de certas funções e os papeis que cada um exerce no sistema
             </h2>
         </div>
-        <h2 class="Assunto">Papeis do Sistema :</h2>
+        <h2 class="Assunto">Casos de Uso:</h2>
+        <div class="Drops">
+            <div class="drop-down">
+                <div class="square">
+                    <div class="topico">Reservar Quarto</div>
+                    <div class="descricaoC">Descrição: Funcionário registra reserva para cliente</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Check-in</div>
+                    <div class="descricaoC">Descrição: O cliente ocupa o quarto reservado</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Check-out</div>
+                    <div class="descricaoC">Descrição: Processo de saída do cliente e cálculo de pagamento</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Registrar Consumo</div>
+                    <div class="descricaoC">Descrição: Adição de consumos (bebidas, refeições etc.)</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Gerar Relatórios</div>
+                    <div class="descricaoC">Descrição: Visualização de relatórios por período, ocupação e receita</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Cadastrar Funcionário</div>
+                    <div class="descricaoC">Descrição: Administrador registra dados dos funcionários</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Gerenciar Quartos</div>
+                    <div class="descricaoC">Descrição: Atualização de informações dos quartos (preço, tipo, status)</div>
+                </div>  
+            </div>  
+        </div>
+        <h2 class="Assunto">Atores do Sistema :</h2>
         <div class="Drops">
             <div class="drop-down">
                 <div class="square">
                     <div class="topico">Gerente</div>
-                    <div class="descricao">Descrição: Responsável pela gestão do sistema, funcionários e relatórios. <br>Detalhamento: <br> 1)  Permite cadastrar funcionários no sistema com definição de perfis de acesso (admin, recepção, limpeza). <br> 2)Geração de relatórios simples como: Ocupação do dia, faturamento diário e média de permanência por suíte <br> 3) Permite criar e configurar promoções por horário, tipo de suíte ou datas especiais. 3)Relatórios com análises mais profundas: Taxa de ocupação mensal,Produtos mais consumidos e suíte mais usada</div>
+                    <div class="descricao">Descrição: Responsável pela gestão do sistema, funcionários e relatórios. <br>Detalhamento: <br> 1)  Permite cadastrar funcionários no sistema com definição de perfis de acesso (admin, recepção, limpeza). <br>
+                         2)Geração de relatórios simples como: Ocupação do dia, faturamento diário e média de permanência por suíte <br>
+                         3) Permite criar e configurar promoções por horário, tipo de suíte ou datas especiais. <br> 
+                         4)Relatórios com análises mais profundas: Taxa de ocupação mensal,Produtos mais consumidos e suíte mais usada</div>
                 </div>
                 <div class="square">
                     <div class="topico">Recepcionista</div>
-                    <div class="descricao">Descrição: Realiza cadastros, reservas, check-in/check-out. <br> 
+                    <div class="descricao">Descrição: Realiza cadastros, reservas, check-in/check-out. <br>Detalhamento: <br> 1) Permite o registro de suítes com informações como número, categoria (simples, luxo, presidencial), valor por hora e status (livre, ocupada, manutenção). <br>
+                        2)Registra a entrada e saída dos hóspedes, associando a suíte utilizada, horário de entrada e saída. <br>
+                        3)Calcula automaticamente o tempo de permanência do hóspede, utilizado para gerar cobrança proporcional. <br>
+                        4) Gera valor final da estadia e permite o registro de pagamentos (dinheiro, cartão, pix). <br> 
+                        5) Marca uma suíte como “em manutenção”, impedindo seu uso até liberação manual. <br> 
+                        6)Permite registrar produtos consumidos na suíte (ex: frigobar, pedidos de cozinha), que são somados à conta final. 
                     </div>
                 </div>
                 <div class="square">
                     <div class="topico">Cliente</div>
-                    <div class="descricao">Descrição: Usuário do serviço que será cadastrado e hospedado.</div>
+                    <div class="descricao">Descrição: Usuário do serviço que será cadastrado e hospedado.<br>Detalhamento: <br> 1) Permite reservar suítes antecipadamente com data e hora marcadas. <br>
+                        2)Funcionalidade acessível via aplicativo ou site, permitindo: Visualizar suítes disponíveis e reservar online de forma anônima <br> 
+                        3) Após o uso da suíte, o cliente pode responder anonimamente uma pesquisa de satisfação por QR Code ou link</div>
                 </div>
                 <div class="square">
                     <div class="topico">Equipe de Limpeza</div>
-                    <div class="descricao">Descrição: Responsáveis pela limpeza do local.</div>
+                    <div class="descricao">Descrição: Responsáveis pela limpeza do local.<br>Detalhamento: <br> 1) Após o check-out, o sistema envia notificação para a equipe de limpeza indicando a suíte a ser higienizada</div>
                 </div>
             </div>
         </div>
+        <h2 class="Assunto">Uml:</h2>
+        <div><img src="Imagens/uml.png" alt="Uml"></div>
+        <h2 class="Assunto">Regras de Negócios</h2>
+        <div class="Text">        
+            <h3>1)A reserva é cancelada automaticamente se o cliente não comparecer em até 30 minutos do horário marcado.
+            <br>
+            2)O valor da hospedagem é calculado com base no tempo de uso do quarto e nos consumos registrados.
+            <br>
+            3)Um quarto não pode ser reservado ou ocupado por mais de um cliente ao mesmo tempo.
+            <br>
+            4)Os funcionários só podem visualizar e editar informações conforme o nível de acesso.
+            </h3>
+        </div>
+        <h2 class="Assunto">Detalhamento dos Artefatos:</h2>
+        <div class="Drops">
+            <div class="drop-down">
+                <div class="square">
+                    <div class="topico">Suíte</div>
+                    <div class="descricao">Descrição: Unidade física e lógica do motel que é cadastrada e gerenciada no sistema. <br>
+                        Atributos principais: Número, tipo (simples, luxo), status (livre, ocupada, manutenção), valor por hora. <br>
+                        Usado em: Cadastro de Suítes, Check-in/Check-out, Controle de Tempo, Registro de Manutenção.
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Registro de Estadia</div>
+                    <div class="descricao">Descrição: Documento ou entidade que registra uma hospedagem, associando cliente, suíte, horários e consumo. <br>
+                        Atributos principais: ID, cliente (se houver), suíte, hora de entrada/saída, valor total. <br>
+                        Usado em: Check-in/Check-out, Controle de Tempo, Pagamento, Relatórios
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Comanda de Consumo</div>
+                    <div class="descricao">Descrição: Lista de produtos consumidos (como itens do frigobar ou pedidos internos). <br>
+                        Atributos principais: Produto, quantidade, valor unitário, valor total. <br>
+                        Usado em: Controle de Consumo, Cobrança
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Funcionário</div>
+                    <div class="descricao">Descrição: Registro de colaborador no sistema. <br>
+                        Atributos principais: Nome, função, login/senha, perfil de acesso (recepção, gerente, limpeza). <br>
+                        Usado em: Cadastro de Funcionários, Permissões de acesso.
+
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Relatórios</div>
+                    <div class="descricao">Descrição: Saídas informativas do sistema, em PDF, planilhas ou exibição na tela. <br>
+                        Tipos: <br>
+                        Básicos: Ocupação diária, faturamento do dia <br>
+                        Avançados: Ocupação mensal, itens mais consumidos, desempenho por suíte. <br>
+                        Usado em: Relatórios Básicos e Avançados.
+
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Reserva</div>
+                    <div class="descricao">Descrição: Registro prévio de uma futura estadia. <br>
+                        Atributos principais: Cliente (opcional), suíte desejada, data/hora, status (confirmada, cancelada). <br>
+                        Usado em: Agendamento de Suítes, Reserva Online.
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Promoção</div>
+                    <div class="descricao">Descrição: Configuração de descontos ou tarifas especiais por período. <br>
+                        Atributos principais: Tipo de desconto, vigência, condições. <br>
+                        Usado em: Gestão de Promoções, Cálculo de Preço.
+                    </div>
+                </div>  
+                <div class="square">
+                    <div class="topico">Aviso de Limpeza</div>
+                    <div class="descricao">Descrição: Notificação enviada automaticamente à equipe de limpeza após o check-out. <br>
+                        Atributos principais: Suíte, horário do aviso, status da limpeza (pendente, concluída).<br>
+                        Usado em: Aviso para Limpeza.
+                    </div>
+                </div>  
+                <div class="square">
+                    <div class="topico">Pesquisa de Satisfação</div>
+                    <div class="descricao">Descrição: Questionário simples enviado ao cliente após a estadia<br>
+                        Atributos principais: Link ou QR Code, avaliação (nota, comentários).<br>
+                        Usado em: Pesquisa de Satisfação, Relatórios de Qualidade.
+                    </div>
+                </div>  
+                <div class="square">
+                    <div class="topico">Pagamento</div>
+                    <div class="descricao">Descrição: Registro financeiro de quitação da estadia. <br>
+                        Atributos principais: Forma de pagamento (dinheiro, cartão, pix), valor pago, troco. <br>
+                        Usado em: Cobrança e Pagamento, Relatórios Financeiros.
+                    </div>
+                </div>  
+            </div>  
+        </div>
+       
     </div>    
 </body>
 <script>

@@ -47,12 +47,6 @@ h2{
     padding: 1rem;
     font-family: 'JetBrains Mono', monospace;
 }
-.descricao{
-    text-align: center;
-    height: 2rem;
-    display: none;
-    font-family: 'JetBrains Mono', monospace;
-}
 
 img{
     margin-left: 20%;
