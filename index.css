@@ -65,30 +65,3 @@ button:hover{
     background-color: #4288f1;
     box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
 }
-
-.conteiner{
-    display: flex;
-    justify-content: center;
-    padding: 5rem;
-}
-
-.square{
-    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
-    width: 50rem;
-    border-radius: 1rem;
-    margin-bottom: 3rem;
-}
-
-.topico{
-    text-align: center;
-    padding: 1rem;
-}
-.descricao{
-    text-align: center;
-    height: 2rem;
-    display: none;
-}
-
-.ativo + .descricao {
-    display: block;
-}
