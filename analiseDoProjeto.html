@@ -4,12 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>analiseDoProjeto</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Css/ADP.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="h1">Engenharia De Software</h1>
+        <h1 class="h1">Análise do Projeto</h1>
     </header>
+    <div class="container">
+        <div class="resumo">
+            <h2 class="h2">
+              A partir da análise do projeto pode-se ver como o sistema deve funcionar, o detalhamento de certas funções e os papeis que cada um exerce no sistema
+            </h2>
+        </div>
+        <h2 class="Assunto">Papeis do Sistema :</h2>
+        <div class="Drops">
+            <div class="drop-down">
+                <div class="square">
+                    <div class="topico">Gerente</div>
+                    <div class="descricao">Descrição: Responsável pela gestão do sistema, funcionários e relatórios. <br>Detalhamento: <br> 1)  Permite cadastrar funcionários no sistema com definição de perfis de acesso (admin, recepção, limpeza). <br> 2)Geração de relatórios simples como: Ocupação do dia, faturamento diário e média de permanência por suíte <br> 3) Permite criar e configurar promoções por horário, tipo de suíte ou datas especiais. 3)Relatórios com análises mais profundas: Taxa de ocupação mensal,Produtos mais consumidos e suíte mais usada</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Recepcionista</div>
+                    <div class="descricao">Descrição: Realiza cadastros, reservas, check-in/check-out. <br> 
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="topico">Cliente</div>
+                    <div class="descricao">Descrição: Usuário do serviço que será cadastrado e hospedado.</div>
+                </div>
+                <div class="square">
+                    <div class="topico">Equipe de Limpeza</div>
+                    <div class="descricao">Descrição: Responsáveis pela limpeza do local.</div>
+                </div>
+            </div>
+        </div>
+    </div>    
 </body>
+<script>
+    const topicos = document.querySelectorAll('.topico');
+    topicos.forEach(topico => {
+    topico.addEventListener('click', () => {
+        topico.classList.toggle('ativo');
+    });
+    });
+</script>
 </html>
